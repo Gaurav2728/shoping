@@ -69,7 +69,7 @@ div {
 }
 
 .row-fluid .span3 {
-    width: 16.0769%;
+    width: 19.0769%;
 }
 
 .list_image {
@@ -77,18 +77,38 @@ width: 80px;
 height: 100px;
 }
 
-
-.list_line_odd
-{
-background-color: #f8b0f8;
-}
-
-.list_line_even 
-{
-background-color: #e0f8f8;
-}
-
 .validation-error
 {
   color: #f00;
 }
+
+.well.sidebar-nav
+{
+  background-color: #3399cc;
+}
+
+.well.sidebar-nav a
+{
+  color: #ffffff;
+}
+
+.well.sidebar-nav .nav-header
+{
+  color: #3366cc;
+  background-color: #ffffff;
+}
+
+.well.sidebar-nav a:hover
+{
+  color: #3366cc;
+  background-color: #ffffff;
+}
+
+
+/*
+.container-fluid .nav-collapse
+{
+  background-color: #3399cc;
+  color: #000;
+}
+*/
