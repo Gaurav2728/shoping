@@ -4,8 +4,6 @@
 <ul>
 <% @cart.line_items.each do |item| %>
 <li>
-  <%= render(@cart.line_items) %>
-
   <%= item.quantity %> &times; 
   <%= item.product.title %> &raquo;
   <%= number_to_currency(item.product.price) %>
