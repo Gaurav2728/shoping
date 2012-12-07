@@ -1,20 +1,12 @@
-<!--
-<% if notice %>
-	<p id="notice"><%= notice %></p>
-<% end %>
--->
-
-<h2>Your Books Catalog</h2>
-
 <table class="table table-striped">
 	<tbody>
 		<% @products.each do |product| %>
 			<td><%= image_tag(product.image_url) %></td>
 			<td>
 				<h4><%= product.title %></h4>
-				<%= sanitize(product.description) %><br /><br />
-				<%= number_to_currency(product.price) %>
-				<%= button_to 'Add to Cart', line_items_path(product_id: product), html_options = {:class => 'btn btn-info'} %>
+				<%= sanitize(product.description) %>
+				<%= number_to_currency(product.price) %> 
+				<%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-inverse' %>
 			</td>
 		</tbody>
 	<% end %>

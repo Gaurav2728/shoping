@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #E1D192;
+  color: #000;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -68,42 +68,59 @@ div {
   }
 }
 
-.row-fluid .span3 {
-    width: 19.0769%;
-}
 
 .list_image {
 width: 80px;
 height: 100px;
 }
-
 .validation-error
 {
   color: #f00;
 }
-
 .well.sidebar-nav
 {
-  background-color: #3399cc;
+  background-color: #EBD282;
+  color: #000000;
+}
+ul.nav.nav-list
+{
+  font-size: 12px;
 }
 
 .well.sidebar-nav a
 {
-  color: #ffffff;
+  color: #8B4513;
 }
 
 .well.sidebar-nav .nav-header
 {
-  color: #3366cc;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #8B4513;
 }
 
 .well.sidebar-nav a:hover
 {
-  color: #3366cc;
-  background-color: #ffffff;
+  background-color: #E7D798;
 }
-
+.navbar .nav li a 
+{
+  color: #FFFFFF;
+}
+.navbar .brand
+{
+  color: #ffffff;
+  text-shadow: 0 1px 0 #FFD700;
+}
+.navbar .nav li a:hover
+{
+  color: #000000;
+  text-shadow: 0 1px 0 #000000;
+}
+.table td
+{
+  color: #000;
+  background-color: #EBD282 !important;
+}
 
 /*
 .container-fluid .nav-collapse

@@ -1,0 +1,9 @@
+<% unless cart.line_items.empty? %>
+<ul class="nav nav-list">
+	<li class="nav-header">Your Cart</li><br />
+	<%= render :partial => (cart.line_items) %>			
+	<br />
+	<li><b>Total - <%= number_to_currency(cart.total_price) %></b></li><br />
+	<%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?', class: 'btn btn-primary' %>
+</ul>
+<% end %>
