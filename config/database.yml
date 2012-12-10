@@ -23,6 +23,5 @@ test:
 production:
   adapter: postgresql
   database: postgres
-  password: Krishna
   pool: 5
   timeout: 5000
