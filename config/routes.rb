@@ -1,13 +1,8 @@
 Shoping::Application.routes.draw do
-  resources :line_items
-
-
-  resources :carts
-
-
+  
+  resources :line_items, :carts, :products
+  
   get "store/index"
-
-  resources :products
 
   root to: 'store#index', as: 'store'
 

@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   def index
-  	@products = Product.order(:title)
+  	@products = Product.order(:title)  # Retrieving Objects from the Database(Product.find_by_title)
   	@cart = current_cart
 
   	if session[:counter].nil?
