@@ -1,5 +1,8 @@
 Shoping::Application.routes.draw do
   
+  resources :orders
+
+
   resources :line_items, :carts, :products
   
   get "store/index"

@@ -6,7 +6,7 @@
 				<h4><%= product.title %></h4>
 				<%= sanitize(product.description) %>
 				<%= number_to_currency(product.price) %> 
-				<%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-inverse' %>
+				<%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-inverse', remote: true %>
 			</td>
 		</tbody>
 	<% end %>
