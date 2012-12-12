@@ -1,6 +1,15 @@
 Shoping::Application.routes.draw do
   
-  resources :orders, :line_items, :carts
+
+  get 'admin' => 'admin#index'
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :orders, :line_items, :carts, :users
   
   get "store/index"
 
