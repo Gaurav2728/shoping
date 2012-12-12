@@ -1,11 +1,12 @@
 Shoping::Application.routes.draw do
   
-  resources :orders
-
-
-  resources :line_items, :carts, :products
+  resources :orders, :line_items, :carts
   
   get "store/index"
+
+  resources :products do # this is for rss feed.
+    get :who_bought, on: :member
+  end
 
   root to: 'store#index', as: 'store'
 

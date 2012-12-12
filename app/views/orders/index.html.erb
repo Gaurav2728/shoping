@@ -1,3 +1,5 @@
+<%- require 'will_paginate/array' -%>
+
 <%- model_class = Order -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
@@ -36,7 +38,7 @@
     <% end %>
   </tbody>
 </table>
-
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_order_path,
             :class => 'btn btn-primary' %>
+<p><%= will_paginate @orders = @orders.paginate(:per_page => 10, :page => params[:page]) %></p>

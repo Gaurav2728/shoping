@@ -6,7 +6,7 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate', '~> 3.0'
 gem 'therubyracer'
 gem 'less-rails'
 gem "twitter-bootstrap-rails"
