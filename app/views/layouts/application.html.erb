@@ -47,7 +47,6 @@
       <%= link_to image_tag('images.jpeg', :size => '30x30')+ "Book Shoping", store_url, class: 'brand' %>
         <div class="container-fluid nav-collapse">
           <ul class="nav">
-            <li><%= link_to "Questions", "/path2"  %></li>
             <li><%= link_to "News", "/path3"  %></li>
             <li><%= link_to "Contact", "/path3"  %></li>
           </ul>
@@ -69,10 +68,9 @@
             <ul class="nav nav-list">
               <li class="nav-header">Quick Links</li>
               <li><%= link_to t('.home'), store_url  %></li>
-              <li><%= link_to t('.questions'), "/path2"  %></li>
               <li><%= link_to t('.news'), "/path3"  %></li>
               <li><%= link_to t('.contact'), "/path3"  %></li>
-              <li><%= link_to "Login", login_url if !session[:user_id].present? %></li>
+              <li><%= link_to t('.login'), login_url if !session[:user_id].present? %></li>
             </ul>
           </div><!--/.well -->
 

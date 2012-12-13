@@ -1,0 +1,59 @@
+en:
+  number:
+    currency:
+      format:
+        unit:      "rs."
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+
+  errors:
+    template:
+      body:        "निम्नलिखित क्षेत्रों के साथ समस्याओं थे:"
+      header:       
+        one:       "1 से बचाया जा रहा हल %{model} इस निषिद्ध त्रुटि"
+        other:     "त्रुटियों को सहेजे जाने से इस %{model} निषिद्ध"
+
+
+#START:layout
+  layouts:
+    application:
+      title:       "Book Shoping"
+      home:        "मुख पृष्ठ"
+      questions:   "Questions"
+      news:        "समाचार"
+      contact:     "संपर्क"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "तुम्हारा टोकरी"
+      empty:       "खाली टोकरी"
+      checkout:    "भुगतान"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "पुस्तक खरीदने के लिए आपका स्वागत है"
+      add_html:    "टोकरी में जोड़ें"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "कृपया अपना विवरण दर्ज करना"
+    form:
+      name:         "नाम"
+      address_html: "पता"
+      email:        "ई - मेल"
+      pay_type:     "भुगतान"
+      pay_prompt_html: "एक भुगतान विधि का चयन"
+      submit:       "पूरा करने के आदेश"
+#END:checkout
+
+#START:flash
+  thanks:          "क्रय आदेश के लिए धन्यवाद"
+#END:flash

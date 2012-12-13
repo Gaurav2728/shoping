@@ -1,12 +1,12 @@
 <%= form_for @order, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
+    <%= f.label :name, t('.name'), :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :name, :class => 'text_field',size: 40 %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :address, :class => 'control-label' %>
+    <%= f.label :address, t('.address_html'), :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :address, :class => 'text_area',rows: 3, cols: 40 %>
     </div>
@@ -18,14 +18,14 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :pay_type, :class => 'control-label' %>
+    <%= f.label :pay_type, t('.pay_type'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
+      <%= f.select :pay_type, Order::PAYMENT_TYPES, prompt: t('.pay_prompt_html') %>
     </div>
   </div>
 
   <div class="form-actions">
-    <%= f.submit 'Place Order', :class => 'btn btn-primary' %>
+    <%= f.submit t('.submit'), :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 orders_path, :class => 'btn' %>
   </div>

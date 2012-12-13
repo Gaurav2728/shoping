@@ -53,6 +53,13 @@ es:
       add_html:    "A&ntilde;adir al Carrito"
 #END:main
 
+
+#START:lineitems
+  line_items:
+    line_item:
+      delete:      "borrar"
+#END:lineitems
+
 #START:checkout
   orders:
     new:

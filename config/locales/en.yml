@@ -26,11 +26,19 @@ en:
       contact:     "Contact"
 #END:layout
 
+#START:lineitems
+  line_items:
+    line_item:
+      delete:      "Delete"
+#END:lineitems
+
+
 #START:cart
   carts:
     cart:
       title:       "Your Cart"
       empty:       "Empty cart"
+      delete:      "Delete"
       checkout:    "Checkout"
 #END:cart
 
