@@ -8,13 +8,27 @@ hn:
         delimiter: ","
         format:    "%u%n"
 
+
+#START:model
+#START:errors
+  activerecord:
+#END:errors
+#END:model
+#START:errors
+    errors:
+      messages:
+        inclusion: "कृपया चुनें"
+        blank:     "कृपया यह भरने के लिए है"
+        value:     "मान्य ई - मेल दर्ज करें"
+        invalid:   "मान्य ई - मेल दर्ज करें"
+
   errors:
     template:
       body:        "निम्नलिखित क्षेत्रों के साथ समस्याओं थे:"
       header:       
         one:       "1 से बचाया जा रहा हल %{model} इस निषिद्ध त्रुटि"
         other:     "त्रुटियों को सहेजे जाने से इस %{model} निषिद्ध"
-
+#END:errors
 
 #START:layout
   layouts:
