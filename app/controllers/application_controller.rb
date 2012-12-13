@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  around_filter :catch_not_found
   before_filter :authorize
-
+  before_filter :set_i18n_locale_from_params
+  around_filter :catch_not_found
 
   def catch_not_found
 	  yield
@@ -26,4 +26,20 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-end
+	protected
+		def set_i18n_locale_from_params
+			if params[:locale]
+				if I18n.available_locales.include?(params[:locale].to_sym)
+					I18n.locale = params[:locale]
+				else
+					flash.now[:notice] = "#{params[:locale]} translation not available"
+					logger.error flash.now[:notice]
+				end
+			end
+		end
+	
+		def default_url_options
+			{ locale: I18n.locale }
+		end
+
+end	

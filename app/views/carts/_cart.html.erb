@@ -1,11 +1,11 @@
 <% unless cart.line_items.empty? %>
 <ul class="nav nav-list">
-	<li class="nav-header">Your Cart</li><br />
+	<div class="cart_title"><li class="nav-header"><%= t('.title') %></li></div>
 	<%= render :partial => (cart.line_items) %>			
 	<br />
 	<li><b>Total - <%= number_to_currency(cart.total_price) %></b></li><br />
-	<%= button_to 'Empty cart', cart, method: :delete, confirm: 'Are you sure?', class: 'btn btn-small btn-primary' %>
-	<%= button_to "Checkout", new_order_path, method: :get, class: 'btn btn-success' %>
+	<%= button_to t('.empty'), cart, method: :delete, confirm: 'Are you sure?', class: 'btn btn-small btn-primary' %>
+	<%= button_to t('.checkout'), new_order_path, method: :get, class: 'btn btn-success' %>
 
 </ul>
 <% end %>
