@@ -20,6 +20,20 @@ Shoping::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+
+  config.action_mailer.raise_delivery_errors = true
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:        "smtp.gmail.com",
+    port:           587,
+    domain:         "BookShoping.com",
+    authentication: "plain",
+    user_name:      "gaurav2728",
+    password:       "1031#Pratap2728@@",
+    enable_starttls_auto: true
+  }
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
