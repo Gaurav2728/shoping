@@ -23,7 +23,7 @@ Shoping::Application.configure do
     domain:         "BookShoping.com",
     authentication: "plain",
     user_name:      "gaurav2728",
-    password:       "1031#Pratap2728@@",
+    password:       "",
     enable_starttls_auto: true
   }
 
