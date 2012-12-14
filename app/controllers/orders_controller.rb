@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.paginate(:page => params[:page], :per_page => 8)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1
   # PUT /orders/1.json
   def update
-    @order = Order.find(params[:id])
+    @order = Order.find
 
     respond_to do |format|
       if @order.update_attributes(params[:order])

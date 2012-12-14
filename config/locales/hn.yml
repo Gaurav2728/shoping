@@ -19,7 +19,6 @@ hn:
       messages:
         inclusion: "कृपया चुनें"
         blank:     "कृपया यह भरने के लिए है"
-        value:     "मान्य ई - मेल दर्ज करें"
         invalid:   "मान्य ई - मेल दर्ज करें"
 
   errors:
