@@ -1,8 +1,20 @@
-<h3>Book Shoping Order Shipped</h3>
+<h3>Book Shoping.com</h3><br />
+
+Dear <%= @order.name %>
 <p>
 This is just to let you know that we've shipped your recent order:
 </p>
 <table>
-<tr><th colspan="2">Qty</th><th>Description</th></tr>
+You ordered the following items:
+
 <%= render @order.line_items %>
+
 </table>
+
+
+
+
+
+
+
+
