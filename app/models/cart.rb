@@ -1,5 +1,5 @@
 class Cart < ActiveRecord::Base
-  attr_accessible :title, :body
+  attr_accessible :title, :body, :line_items, :quantity
   has_many :line_items, dependent: :destroy # destroy any line items that are associated with that cart.
 
 	def add_product(product_id)

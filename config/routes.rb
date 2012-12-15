@@ -1,7 +1,10 @@
 Shoping::Application.routes.draw do
   
-
   get 'admin' => 'admin#index'
+  
+  resources :line_items do
+    delete 'delete_quantity', on: :member
+  end
 
   controller :sessions do
     get 'login' => :new

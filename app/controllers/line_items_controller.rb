@@ -49,10 +49,13 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product.id)
     @line_item.product = product
 
+    if @line_item.quantity > 4
+      format.html { redirect_to store_url, notice: 'Line item was successfully updated.' }
+    end
+
     respond_to do |format|
       if @line_item.save
-        #format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
-        format.html { redirect_to store_url }
+        format.html { redirect_to store_url,notice: 'Line item was successfully updated.'}
         format.js   { @current_item = @line_item }  # javascript file create.js.erb
         format.json { render json: @line_item, status: :created, location: @line_item }
       else
@@ -81,8 +84,25 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy 
-    @line_item = LineItem.find(params[:id])
-    @line_item.destroy
+    line_item = LineItem.find(params[:id])
+
+    line_item.destroy
+    respond_to do |format|
+      format.html { redirect_to line_items_url }
+      format.json { head :no_content }
+    end
+  end
+
+
+  def delete_quantity()
+    line_item = LineItem.find(params[:id])
+
+    if line_item.quantity > 1
+      line_item.quantity -=1
+      line_item.save
+    else
+      line_item.destroy
+    end
 
     respond_to do |format|
       format.html { redirect_to store_url }

@@ -8,6 +8,6 @@
 <td><%= line_item.quantity %>&times;</td>
 <td><%= line_item.product.title %>-</td>
 <td><%= number_to_currency(line_item.total_price) %></td>
-<td><%= button_to t('.delete'), line_item, method: :delete, confirm: 'Are you sure?', 
+<td><%= button_to t('.delete'), delete_quantity_line_item_path(line_item), method: :delete, confirm: 'Are you sure?', 
 class: 'btn btn-mini btn-danger' %></td>
 </tr>
