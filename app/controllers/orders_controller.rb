@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.paginate(:page => params[:page], :per_page => 8)
+    @orders = Order.paginate(:page => params[:page], :per_page => 7)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1
   # PUT /orders/1.json
   def update
-    @order = Order.find
+    @order = Order.find(params[:id])
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
@@ -90,6 +90,18 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to orders_url }
+      format.json { head :no_content }
+    end
+  end
+
+  def ship()
+    order = Order.find(params[:id])
+
+    order.ship_date = Time.now
+    order.save
+    OrderNotifier.received(order).deliver # for email sending.
+    respond_to do |format|
+      format.html { redirect_to orders_url, notice: 'Order was successfully Shiped' }
       format.json { head :no_content }
     end
   end

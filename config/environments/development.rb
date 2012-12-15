@@ -13,6 +13,11 @@ Shoping::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+
+  # Enable the asset pipeline
+  config.assets.enabled = true
+  config.assets.paths << "#{Rails.root}/app/assets/fonts/" 
+
   # care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
   

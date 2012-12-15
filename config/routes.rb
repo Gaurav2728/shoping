@@ -6,6 +6,10 @@ Shoping::Application.routes.draw do
     delete 'delete_quantity', on: :member
   end
 
+  resources :orders do
+    put 'ship', on: :member
+  end
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create

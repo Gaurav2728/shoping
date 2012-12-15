@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   around_filter :catch_not_found
 
   def catch_not_found
-	  yield
+		yield
 	rescue ActiveRecord::RecordNotFound
-  	redirect_to store_index_url, :flash => { :error => "Record not found." }
+  	redirect_to store_url, :flash => { :error => "Record not found." }
 	end
 
   private

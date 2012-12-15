@@ -1,17 +1,17 @@
 @font-face {
-    font-family: bickhamscriptfancy2;
-    src: url('/assets/bickhamscriptfancy2');
+    font-family: BaroqueScript;
+    src: url('BaroqueScript.ttf');
 }
 body {
   background-color: #E1D192;
   color: #000;
-  font-family: bickhamscriptfancy2;
+  font-family: BaroqueScript;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: bickhamscriptfancy2;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -20,7 +20,7 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-  font-family: bickhamscriptfancy2;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 a {
